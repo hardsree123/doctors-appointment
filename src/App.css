@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 1025px) and (min-width:699px) {
+  .app__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and  (max-width: 1700px) and (min-width: 1025px) {
+  .app__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 1700px) {
+  .app__cards {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html{
+  scroll-snap-type: y mandatory;
+}
+
+body{
+  --da-color:#036C8A;
+  --da-card-bg:#e6ecf0;
+}
+
+.app__cards {
+  margin-top:2px;
+  flex:1;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
+  overflow:scroll;
+  scroll-snap-type:y mandatory;
+  -ms-overflow-style: none;/*IE and edge*/
+  scrollbar-width:none;/* Firefox */
+  box-shadow:-1px 4px 20px -6px rgba(0,0,0,0.75);
+}
+
+.app__cards::-webkit-scrollbar{
+  display:none; /*chrome*/
 }

@@ -1,0 +1,109 @@
+.doccard{
+    display: flex;
+    flex-flow:row nowrap;
+    margin-top:1px;
+    margin-bottom:1px;
+    height:200px;
+    background-color: var(--da-card-bg); 
+    border-width: 2px;
+    border-color: var(--da-color);
+    border-style: solid;
+    border-radius: 10px;
+    min-width: 360px;
+}
+
+.doccard>*{
+    /*flex:0 1; /*left shouldnt grow but right shall*/
+}
+
+.doccard__avatar{
+    height:100px !important;
+    width:100px !important;
+    object-fit:contain;
+}
+
+.doccard__appointment{
+    padding-top:15px !important;
+}
+.doccard__bookapntmnt{
+    padding-top:10px;
+    padding-left:5px;
+    font-weight: 600;
+}
+.doccard__appcontents{
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+
+.doccard__appcontents>.MuiFormControl-root {
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+/* @media screen and (max-width: 1025px) and (min-width:699px) { */
+.doccard__bookbutton>.MuiButtonBase-root{
+    margin:10px !important;    
+
+    /* align-items: center !important ; */
+}
+
+.doccard__bookbutton>.makeStyles-button-2{
+    /* margin-bottom: 5px !important;
+    margin-right: 5px !important; */
+}
+/* } */
+
+@media screen and (max-width: 699px){
+    .doccard__appcontents>.MuiButtonBase-root{
+        margin-left:25px;
+        padding-left:4px !important;
+        margin-top:5px;
+    }
+}
+
+
+.doccard__infoappon{
+    display: flex;
+    width:100%;
+}
+
+.doccard__heading{
+    flex:1;
+    flex-direction: row;
+}
+
+.doccard__rating{
+    padding-top: 20px;
+    display:flex;
+    align-items: center;
+}
+
+.doccard__name{
+    font-size:17px;
+    font-weight:800;
+}
+
+.doccard__image{
+    width: 25%;
+    height: 90%;
+    padding-left:10px;
+    padding-top:10px;
+    z-index: 0;
+}
+
+.doccard__profile{
+    cursor: pointer;
+    padding-top:2px;
+    font-weight: 600 !important;
+}
+.doccard__details{
+    width: 100% !important;
+    padding: 15px;
+    padding-left:25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow:column nowrap;
+}
